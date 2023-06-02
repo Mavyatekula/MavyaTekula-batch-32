@@ -1,0 +1,39 @@
+<html>
+<head>
+    <title>Assignment 2</title>
+</head>
+  
+<body>
+    <style>
+        img{
+            height:200px;
+            width:200px;
+            border-radius:50%;
+        }
+    </style>
+        <h1>Profile</h1>
+        <img src="/Users/mavyatekula/Desktop/photo1.jpg" alt="img" width="200px">
+        <p id="First Name"></p>
+        <p id="Last Name"></p>
+        <p id="Education"></p>
+        <p id="hobbies"></p>
+        <p id="Experience"></p>
+ 
+
+    <script>
+        var person = {
+            FirstName: 'Mavya',
+            LastName: 'Tekula',
+            Education: 'University of North Texas Computer Science',
+            hobbies: ['reading', 'playing games', 'movies'],
+            Experience: '2years as a administrator'
+        };
+
+        document.getElementById("First Name").innerHTML="First Name: "+person.FirstName;
+        document.getElementById("Last Name").innerHTML="Last Name: "+person.LastName;
+        document.getElementById("Education").innerHTML="Education: "+person.Education;
+        document.getElementById("hobbies").innerHTML="hobbies: "+person.hobbies[1];
+        document.getElementById("Experience").innerHTML="Experience: "+person.Experience;
+    </script>
+</body>
+</html>
