@@ -1,35 +1,26 @@
+<!DOCTYPE html>
 <html>
-    <head></head>
-    <body>
-        <script>
-        let hobbies = ['Playing games', 'Reading', 'Writing dairy'];
-function displayHobbies() {
-    console.log('Hobbies are:');
-    console.log(hobbies);
-  }
-  
-  function addHobby(newHobby) {
-    hobbies.push(newHobby);
-    console.log(`Added "${newHobby}" to the list of hobbies.`);
-  }
-  
-  function deleteHobby(hobbyToDelete) {
-    const index = hobbies.indexOf(hobbyToDelete);
-    if (index !== -1) {
-      hobbies.splice(index, 1);
-      console.log(`Deleted "${hobbyToDelete}" from the list of hobbies.`);
-    } else {
-      console.log(`"${hobbyToDelete}" does not exist in the list of hobbies.`);
-    }
-  }
-  
- 
-  displayHobbies();
-  
-  addHobby('Playing games'); 
-  displayHobbies(); 
-  deleteHobby('Reading'); 
-  displayHobbies();
-  </script>
-      </body>
-  </html>
+  <body>
+    <script>
+
+      function displayHobbies() {
+        console.log(Hobbies);
+      }
+
+      function addHobby(newHobbies) {
+        Hobbies.push(newHobbies);
+        console.log("New hobby added:", newHobbies);
+      }
+
+      function deleteHobby(hobbyToDelete) {
+        Hobbies = Hobbies.filter(hobby => hobby !== hobbyToDelete);
+        console.log("Hobby deleted:", hobbyToDelete);
+      }
+      let Hobbies = ['Reading', 'Writing diary', 'Cooking'];
+      displayHobbies();
+      addHobby('Playing games');
+      deleteHobby('Reading');
+      displayHobbies();
+    </script>
+  </body>
+</html>
