@@ -1,40 +1,45 @@
 <!DOCTYPE html>
 <html>
     <head>
-    <title> My Profile</title>
-<body>
-    
+        <title>My Profile</title>
     </head>
-    </body>
+    <body>
         <h1>profile information</h1>
-        <label for ="firtname">FirstName: </label>
-        <input type="text" id="firstname" name="firstname"></br>
+        <label>FirstName: </label>
+        <input type="text" id="firstname" name="FirstName"><br>
 
-        <label for="lastname">LastName:</label>
-        <input type="text" id="LastName" name="Lastname"></br>
+        <label>LastName:</label>
+        <input type="text" id="LastName" name="LastName"><br>
 
-        <label for="DOB">DOB</label>
-        <input type="text" id="EOB"name="EOB"></br>
+        <label>DOB</label>
+        <input type="date" id="DOB" name="DOB"><br>
 
-        <label for="Email">Email</label>
-        <input type="text" id="Email"name="Email"></br>
+        <label>email</label>
+        <input type="text" id="Email" name="Email"><br>
 
-        <label for="phonenum">phonenum</label>
-        <input type="text" id="EOB"name="phonenum"></br>
+        <label>Phonenum</label>
+        <input type="number" id="phonenum" name="Phonenum"><br>
 
+        <button onclick="displayInfo()">Submit</button>
+        <div id="MyProfile"></div>
+        
         <script>
-            function displayInfo(){
-                var FirstName=document.getElementById("firstname").value;
-                var LastName=document.getElementById("Lastname").value;
-                var DOB=document.getElementById("DOB").value;
-                var email=document.getElementById("email").value;
-                var phonenum=document.getElementById("phoneno").value;
+            function displayInfo() {
+                var FirstName = document.getElementById("firstname").value;
+                var LastName = document.getElementById("LastName").value;
+                var DOB = document.getElementById("DOB").value;
+                var Email = document.getElementById("Email").value;
+                var Phonenum = document.getElementById("phonenum").value;
             
-                var displayText="firstname" + firstname + "<br>" + "Lastname"  + LastName +"<br>" + "Dateofbirth" +DOB +"<br>" +"Email" +email+"<br>"+"phonenum" +Phonennum;
+                var displayText = "FirstName: " + FirstName + "<br>"
+                                + "LastName: " + LastName + "<br>"
+                                + "Date of Birth: " + DOB + "<br>"
+                                + "Email: " + Email + "<br>"
+                                + "Phone Number: " + Phonenum;
+             document.getElementById("MyProfile").innerHTML = displayText;
             }
-                </script>
-                <button onclick="displayInfo()">Submit</button>
-                <div id=" My profile "></div>
+            
+        </script>
+ 
     </body>
-</body>
 </html>
