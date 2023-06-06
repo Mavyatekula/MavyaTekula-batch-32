@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title> My Profile</title>
+<body>
+    
+    </head>
+    </body>
+        <h1>profile information</h1>
+        <label for ="firtname">FirstName: </label>
+        <input type="text" id="firstname" name="firstname"></br>
+
+        <label for="lastname">LastName:</label>
+        <input type="text" id="LastName" name="Lastname"></br>
+
+        <label for="DOB">DOB</label>
+        <input type="text" id="EOB"name="EOB"></br>
+
+        <label for="Email">Email</label>
+        <input type="text" id="Email"name="Email"></br>
+
+        <label for="phonenum">phonenum</label>
+        <input type="text" id="EOB"name="phonenum"></br>
+
+        <script>
+            function displayInfo(){
+                var FirstName=document.getElementById("firstname").value;
+                var LastName=document.getElementById("Lastname").value;
+                var DOB=document.getElementById("DOB").value;
+                var email=document.getElementById("email").value;
+                var phonenum=document.getElementById("phoneno").value;
+            
+                var displayText="firstname" + firstname + "<br>" + "Lastname"  + LastName +"<br>" + "Dateofbirth" +DOB +"<br>" +"Email" +email+"<br>"+"phonenum" +Phonennum;
+            }
+                </script>
+                <button onclick="displayInfo()">Submit</button>
+                <div id=" My profile "></div>
+    </body>
+</body>
+</html>
