@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Second Smallest Number is</title>
+  <script>
+    Array.prototype.customSort = function() {
+      this.sort(function(a, b)
+       {
+        return a - b;
+      });
+    };
+
+    Array.prototype.getSubmit = function() {
+      
+      this.customSort();
+
+      return this[1];
+    };
+
+    function Submit() {
+      
+      var input = document.getElementById("numbers").value;
+      var numArray = input.split(",").map(Number);
+
+      var secondSmallest = numArray.getSubmit();
+
+      document.getElementById("result").innerHTML = "Second Smallest Number: " + secondSmallest;
+    }
+
+  </script>
+</head>
+<body>
+  <h1>Find Second Smallest Number</h1>
+  <label for="numbers">Enter numbers:</label>
+  <input type="text" id="numbers">
+  <button onclick="Submit()">Submit</button>
+  <div id="result"></div>
+</body>
+</html>
